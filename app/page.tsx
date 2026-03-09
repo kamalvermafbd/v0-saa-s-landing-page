@@ -7,6 +7,8 @@ import { CheckCircle2, Menu, X, ArrowRight, Zap, Users, TrendingUp, Smartphone, 
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  // 👇 YAHI ADD KARNA HAI
+  const [selectedPlan, setSelectedPlan] = useState("pro")
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -383,13 +385,14 @@ export default function Home() {
                 highlighted: false,
               },
             ].map((plan, i) => (
-              <div
-                key={i}
-                className={`rounded-xl p-8 transition ${
-                  plan.highlighted
-                    ? 'bg-gradient-to-br from-primary to-accent text-white border-2 border-primary shadow-xl scale-105'
-                    : 'bg-white border border-border'
-                }`}
+  <div
+    key={i}
+    onClick={() => setSelectedPlan(plan.name.toLowerCase())}
+    className={`rounded-xl p-8 transition cursor-pointer ${
+      selectedPlan === plan.name.toLowerCase()
+        ? 'bg-gradient-to-br from-primary to-accent text-white border-2 border-primary shadow-xl scale-105'
+        : 'bg-white border border-border'
+    }`}
               >
                 <h3 className={`text-2xl font-bold mb-2 ${plan.highlighted ? 'text-white' : 'text-foreground'}`}>
                   {plan.name}
