@@ -368,7 +368,7 @@ export default function Home() {
                   'Priority support',
                   'Customer analytics',
                 ],
-                highlighted: true,
+                highlighted: false,
               },
               {
                 name: 'Business',
