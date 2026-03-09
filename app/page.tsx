@@ -356,7 +356,7 @@ export default function Home() {
               },
               {
                 name: 'Pro',
-                price: '₹4,999',
+                price: '₹1,999',
                 period: '/month',
                 description: 'For growing restaurants',
                 features: [
@@ -370,7 +370,7 @@ export default function Home() {
               },
               {
                 name: 'Business',
-                price: '₹9,999',
+                price: '₹3,999',
                 period: '/month',
                 description: 'For established chains',
                 features: [
